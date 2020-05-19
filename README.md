@@ -1,8 +1,8 @@
 ## Résumé
-> My resume written using LaTeX with the help of Overleaf.
+My personal resume written using LaTeX with the help of Overleaf.
 
 ## Usage
-- Use at Overleaf here at [overleaf.com](https://www.overleaf.com/)
+- Use at Overleaf at [overleaf.com](https://www.overleaf.com/)
 - Compile with LaTeX on your computer
 
 # Sample Resume
