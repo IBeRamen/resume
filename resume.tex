@@ -1,0 +1,167 @@
+\documentclass[a4paper]{article}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage[left=0.5in, right=0.5in, top=1in]{geometry}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-6pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Omar Rahman}}\\
+	Orlando, FL $\cdot$ omar@omartech.me $\cdot$ (123) 456-7890 $\cdot$ www.omartech.me $\cdot$ github.com/iberamen\\
+\end{center}
+
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+% Deloitte
+\textbf{Deloitte} \hfill Lake Mary, FL\\
+\textit{Solutions Analyst} \hfill May 2019 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Led the project on creating an IT help desk from the ground up for a national bank, leading to a successful project launch handling 100s of tickets a day.
+	\item Automated the imaging process for hundreds of laptops which increased new device deployments by a factor of five.
+	\item Managed and troubleshot Active Directory, FiServ applications and ServiceNow integration, decreasing ticket volume handle time by 30\%.
+	\item Created Python workshops to introduce programming and Deloitte to students, increasing new talent job applications.
+\end{itemize}
+
+% Geek Squad
+\textbf{Geek Squad} \hfill Orlando, FL\\
+\textit{Advanced Repair Agent} \hfill September 2016 - May 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Achieved the highest computer repairs per hour in the market which led to a boost in client satisfaction by 20\%.
+	\item Influenced work efficiency by creating new computer repair workflows which increased work productivity by 50\%.
+\end{itemize}
+
+% Freelance
+\textbf{Freelance} \hfill Orlando, FL $\cdot$  Amman, Jordan\\
+\textit{Software Engineer} \hfill June 2014 - September 2016\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Facilitated client websites and servers to ensure reliability, which accelerated business up time.
+	\item Developed timezone management integration and weather data support into a MySQL database which decreased website load times by 10\%.
+	\item Implemented Content Management Systems (CMS) and deployed cloud AWS instances for small businesses.
+\end{itemize}
+
+% Microsoft
+\textbf{Microsoft} \hfill Amman, Jordan\\
+\textit{Intern} \hfill June 2012 - June 2014\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Mentored students on the fundamentals of computer programming concepts through visual
+programming software, which increased student engagement in computer science.
+	\item Developed games using Unity and Unreal game engine in a team based environment.
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\textbf{University of Florida}\hfill Orlando, FL\\
+B.S Computer Science
+\textit{GPA: 3.55} \hfill January 2019 - Spring 2021\\
+\vspace{2mm}
+\textbf{Valencia College}\hfill Orlando, FL\\
+A.A Computer Science \textit{GPA: 3.55} \hfill August 2016 - December 2018\\
+\vspace{2mm}
+\begin{itemize} \itemsep 1pt
+	\item Programming Coursework: Security in Computing, Object Orientated Java Programming, Advanced C and C++, Algorithms \& Data Structures
+\end{itemize}
+
+%==== Projects ====%
+
+\header{Software Projects}
+
+\input{projects/chatapp.tex}
+\input{projects/budgetapp.tex}
+%\input{projects/smartmirror.tex}
+
+%==== Skills ====%
+\header{Skills}
+\begin{minipage}{2in}
+\textbf{Software:}
+    \begin{description}
+        \vspace{-2mm}
+        \item \textit{Advanced:} Python, Linux, Git, HTML/CSS
+        \item \textit {Familiar:} PHP, JavaScript, MySQL, Java, C++, C
+    \end{description}
+\end{minipage}
+\hfill
+\begin{minipage}{2in}
+\vspace{4mm}
+\textbf{Awards \& Certifications}
+    \begin{description}
+        \vspace{-2mm}
+        \item CompTIA Sec+
+        \item Google IT
+        \item Apple ACIT
+        \item Google Hackathon, 1st Place
+    \end{description}
+\end{minipage}
+
+\ 
+\end{document}
